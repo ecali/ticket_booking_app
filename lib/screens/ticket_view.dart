@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
 
-import '../utils/app_latout.dart';
+import '../utils/app_layout.dart';
 import '../widgets/thick_container.dart';
 
 class TicketView extends StatelessWidget {
