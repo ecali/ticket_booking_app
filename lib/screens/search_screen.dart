@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/utils/app_layout.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
 
+import '../widgets/double_text_widget.dart';
 import '../widgets/icon_text_widget.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -69,7 +70,10 @@ class SearchScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(AppLayout.getWidth(10))
             ),
             child: Center(child: Text('Find tickets', style: Styles.textStyle.copyWith(color: Colors.white)))
-          )
+          ),
+          Gap(AppLayout.getHeight(40)),
+          const AppDoubleTextWidget(bigText: 'Upcoming flights', smallText: 'view all')
+
         ],
       ),
     );
