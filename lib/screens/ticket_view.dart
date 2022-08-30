@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
+import 'package:ticket_booking_app/widgets/column_layout.dart';
+import 'package:ticket_booking_app/widgets/layout_builder_widget.dart';
 
 import '../utils/app_layout.dart';
 import '../widgets/thick_container.dart';
@@ -40,21 +42,7 @@ class TicketView extends StatelessWidget {
                         children : [
                         SizedBox(
                           height: AppLayout.getHeight(24),
-                          child: LayoutBuilder(
-                            builder: (BuildContext context, BoxConstraints constraints) {
-                              return  Flex(
-                                direction: Axis.horizontal,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                mainAxisSize: MainAxisSize.max,
-                                children: List.generate((constraints.constrainWidth() / 6).floor(), (index) => SizedBox(
-                                  width: AppLayout.getWidth(3), height: AppLayout.getHeight(1), child: DecoratedBox(decoration: BoxDecoration(
-                                    color: isColor == null ? Colors.white : Colors.grey.shade300
-                                ),),
-                                )),
-                              );
-                            },
-
-                          ),
+                          child: const AppLayoutBuilderWidget(sections: 6)
                         ),
                         Center(child: Transform.rotate(angle: 1.5, child: Icon(Icons.local_airport_rounded, color: isColor == null ? Colors.white : const Color(0xFF8ACCF7)))),
                         ]
@@ -146,30 +134,9 @@ class TicketView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('${ticket['date']}', style: isColor == null ?  Styles.headlineStyle3.copyWith(color: Colors.white) : Styles.headlineStyle3),
-                          const Gap(5),
-                          Text('Date', style: isColor == null ?  Styles.headlineStyle4.copyWith(color: Colors.white) : Styles.headlineStyle4),
-                        ],
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text('${ticket['departure_time']}', style: isColor == null ?  Styles.headlineStyle3.copyWith(color: Colors.white) : Styles.headlineStyle3),
-                          const Gap(5),
-                          Text('Departure time', style: isColor == null ?  Styles.headlineStyle4.copyWith(color: Colors.white) : Styles.headlineStyle4),
-                        ],
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Text('${ticket['number']}', style: isColor == null ?  Styles.headlineStyle3.copyWith(color: Colors.white) : Styles.headlineStyle3),
-                          const Gap(5),
-                          Text('Number', style: isColor == null ?  Styles.headlineStyle4.copyWith(color: Colors.white) : Styles.headlineStyle4),
-                        ],
-                      ),
+                      AppColumnLayout(firstText: ticket['date'], secondText: 'Date', alignment: CrossAxisAlignment.start, isColor: isColor,),
+                      AppColumnLayout(firstText: ticket['departure_time'], secondText: 'Departure time', alignment: CrossAxisAlignment.center, isColor: isColor ),
+                      AppColumnLayout(firstText: ticket['number'].toString(), secondText: 'Number', alignment: CrossAxisAlignment.end, isColor: isColor ),
                     ],
                   )
                 ],
