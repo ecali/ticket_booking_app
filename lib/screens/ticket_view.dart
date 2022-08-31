@@ -5,6 +5,7 @@ import 'package:ticket_booking_app/utils/app_style.dart';
 import 'package:ticket_booking_app/widgets/column_layout.dart';
 import 'package:ticket_booking_app/widgets/layout_builder_widget.dart';
 
+import '../utils/app_colors.dart';
 import '../utils/app_layout.dart';
 import '../widgets/thick_container.dart';
 
@@ -70,7 +71,7 @@ class TicketView extends StatelessWidget {
             ),
             /* showing the orange part of the card/ticket */
             Container(
-              color: isColor == null ? Styles.orangeColor : Colors.white,
+              color: isColor == null ? AppColors.orangeColor : Colors.white,
               child: Row(
                 children: [
                   SizedBox(
@@ -125,7 +126,7 @@ class TicketView extends StatelessWidget {
             /* Bottom part of the orange card/ticket */
             Container(
               decoration: BoxDecoration(
-                  color: isColor == null ? Styles.orangeColor : Colors.white,
+                  color: isColor == null ? AppColors.orangeColor : Colors.white,
                   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(AppLayout.getWidth(isColor == null ? 21 : 0)), bottomRight: Radius.circular(AppLayout.getWidth(isColor == null ? 21 : 0)))
               ),
               padding: EdgeInsets.only(left: AppLayout.getWidth(16), top: AppLayout.getWidth(10), right: AppLayout.getWidth(16), bottom: AppLayout.getWidth(16)),

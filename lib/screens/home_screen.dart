@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/screens/hotel_screen.dart';
 import 'package:ticket_booking_app/screens/ticket_view.dart';
+import 'package:ticket_booking_app/utils/app_colors.dart';
 import 'package:ticket_booking_app/utils/app_info_list.dart';
 import 'package:ticket_booking_app/widgets/double_text_widget.dart';
 
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Styles.bgColor,
+      backgroundColor: AppColors.bgColor,
       body: ListView(
         children: [
            Container(

@@ -7,13 +7,15 @@ import 'package:ticket_booking_app/utils/app_style.dart';
 import 'package:ticket_booking_app/widgets/column_layout.dart';
 import 'package:ticket_booking_app/widgets/layout_builder_widget.dart';
 
+import '../utils/app_colors.dart';
+
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Styles.bgColor,
+      backgroundColor: AppColors.bgColor,
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20), vertical: AppLayout.getHeight(20)),
         children: [
@@ -140,7 +142,7 @@ class ProfileScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(15)),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(AppLayout.getWidth(18)),
-              color: Styles.bgColor,
+              color: AppColors.bgColor,
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.shade200,
@@ -153,7 +155,7 @@ class ProfileScreen extends StatelessWidget {
               children: [
                 Gap(AppLayout.getHeight(15)),
                 Text('192802', style: TextStyle(
-                  fontSize: 45, color: Styles.textColor, fontWeight: FontWeight.w600
+                  fontSize: 45, color: AppColors.textColor, fontWeight: FontWeight.w600
                 )),
                 Gap(AppLayout.getHeight(20)),
                 Row(

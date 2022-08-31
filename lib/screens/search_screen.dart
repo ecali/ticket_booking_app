@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ticket_booking_app/utils/app_colors.dart';
 import 'package:ticket_booking_app/utils/app_layout.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
 import 'package:ticket_booking_app/widgets/ticket_tabs.dart';
@@ -15,7 +16,7 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return Scaffold(
-      backgroundColor: Styles.bgColor,
+      backgroundColor: AppColors.bgColor,
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20), vertical: AppLayout.getHeight(20)),
         children: [

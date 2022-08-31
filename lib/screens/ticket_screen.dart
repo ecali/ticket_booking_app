@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/screens/ticket_view.dart';
+import 'package:ticket_booking_app/utils/app_colors.dart';
 import 'package:ticket_booking_app/utils/app_info_list.dart';
 import 'package:ticket_booking_app/utils/app_layout.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
@@ -17,7 +18,7 @@ class TicketScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return Scaffold(
-      backgroundColor: Styles.bgColor,
+      backgroundColor: AppColors.bgColor,
       body: Stack(
         children: [
           ListView(
@@ -101,7 +102,7 @@ class TicketScreen extends StatelessWidget {
                       barcode: Barcode.code128(),
                       data: 'https://github.com/ecali',
                       drawText: false,
-                      color: Styles.textColor,
+                      color: AppColors.textColor,
                       width: double.infinity,
                       height: 70,
                     ),
@@ -122,11 +123,11 @@ class TicketScreen extends StatelessWidget {
               padding: EdgeInsets.all(3),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: Styles.textColor, width: 2)
+                border: Border.all(color: AppColors.textColor, width: 2)
               ),
               child: CircleAvatar(
                 maxRadius: 4,
-                backgroundColor: Styles.textColor,
+                backgroundColor: AppColors.textColor,
               ),
             ),
           ),
@@ -137,11 +138,11 @@ class TicketScreen extends StatelessWidget {
               padding: EdgeInsets.all(3),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: Styles.textColor, width: 2)
+                  border: Border.all(color: AppColors.textColor, width: 2)
               ),
               child: CircleAvatar(
                 maxRadius: 4,
-                backgroundColor: Styles.textColor,
+                backgroundColor: AppColors.textColor,
               ),
             ),
           )
