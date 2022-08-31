@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_booking_app/utils/app_colors.dart';
 
 class ThickContainer extends StatelessWidget {
   final bool? isColor;
@@ -11,7 +12,7 @@ class ThickContainer extends StatelessWidget {
       padding: const EdgeInsets.all(3.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(width: 2.5, color: isColor == null ? Colors.white : const Color(0xFF8ACCF7))
+        border: Border.all(width: 2.5, color: isColor == null ? Colors.white : AppColors.lightBlue)
       ),
     );
   }

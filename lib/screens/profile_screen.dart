@@ -47,22 +47,22 @@ class ProfileScreen extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(AppLayout.getHeight(100)),
-                      color: const Color(0xFFFEF4F3)
+                      color: AppColors.likeWhite
                     ),
                     padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(3), vertical: AppLayout.getHeight(3)),
                     child: Row(
                       children: [
                         Container(
                           padding: const EdgeInsets.all(3),
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Color(0xFF526799)
+                            color: AppColors.naviBlue
                           ),
                           child: const Icon(FluentSystemIcons.ic_fluent_shield_filled, color: Colors.white, size: 15),
                         ),
                         Gap(AppLayout.getHeight(5)),
-                        const Text('Premium status', style: TextStyle(
-                          color: Color(0xFF526799), fontWeight: FontWeight.w600
+                        Text('Premium status', style: TextStyle(
+                          color: AppColors.naviBlue, fontWeight: FontWeight.w600
                         )),
                         Gap(AppLayout.getHeight(5)),
                       ],
@@ -103,7 +103,7 @@ class ProfileScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.transparent,
                       shape: BoxShape.circle,
-                      border: Border.all(width: 18, color: const Color(0xFF264CD2))
+                      border: Border.all(width: 18, color: AppColors.intenseBlue)
                     ),
                   )
               ),

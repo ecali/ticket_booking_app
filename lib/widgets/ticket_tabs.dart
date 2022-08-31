@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_booking_app/utils/app_colors.dart';
 
 import '../utils/app_layout.dart';
 
@@ -17,7 +18,7 @@ class AppTicketTabs extends StatelessWidget {
         padding: const EdgeInsets.all(3.5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
-          color: const Color(0xFFF4F6FD),
+          color: AppColors.whiteBlue,
         ),
         child: Row(
           children: [

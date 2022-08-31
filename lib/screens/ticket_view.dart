@@ -28,7 +28,7 @@ class TicketView extends StatelessWidget {
             /* showing the blue part of the card/ticket */
             Container(
               decoration:  BoxDecoration(
-                color: isColor == null ? const Color(0xFF526799) : Colors.white,
+                color: isColor == null ? AppColors.naviBlue : Colors.white,
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(AppLayout.getHeight(21)), topRight: Radius.circular(AppLayout.getHeight(21)))
               ),
               padding: EdgeInsets.all(AppLayout.getHeight(16)),
@@ -45,7 +45,7 @@ class TicketView extends StatelessWidget {
                           height: AppLayout.getHeight(24),
                           child: const AppLayoutBuilderWidget(sections: 6)
                         ),
-                        Center(child: Transform.rotate(angle: 1.5, child: Icon(Icons.local_airport_rounded, color: isColor == null ? Colors.white : const Color(0xFF8ACCF7)))),
+                        Center(child: Transform.rotate(angle: 1.5, child: Icon(Icons.local_airport_rounded, color: isColor == null ? Colors.white : AppColors.lightBlue))),
                         ]
                       )),
                       const ThickContainer(isColor: true),

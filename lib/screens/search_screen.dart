@@ -32,7 +32,7 @@ class SearchScreen extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(18), horizontal: AppLayout.getWidth(15)),
             decoration: BoxDecoration(
-              color: const Color(0xD91130CE),
+              color: AppColors.heavyBlue,
               borderRadius: BorderRadius.circular(AppLayout.getWidth(10))
             ),
             child: Center(child: Text('Find tickets', style: Styles.textStyle.copyWith(color: Colors.white)))
@@ -86,7 +86,7 @@ class SearchScreen extends StatelessWidget {
                         width: size.width * 0.44,
                         height: AppLayout.getHeight(200),
                         decoration: BoxDecoration(
-                          color: Color(0xFE3AB8B8),
+                          color: AppColors.aquaBlue,
                           borderRadius: BorderRadius.circular(AppLayout.getHeight(18)),
                         ),
                         padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(15), horizontal: AppLayout.getHeight(15)),
@@ -106,7 +106,7 @@ class SearchScreen extends StatelessWidget {
                         padding: EdgeInsets.all(AppLayout.getHeight(30)),
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            border: Border.all(width: 18, color: Color(0xFF189999)),
+                            border: Border.all(width: 18, color: AppColors.darkAquaBlue),
                             color: Colors.transparent
                         ),
                       )
@@ -120,7 +120,7 @@ class SearchScreen extends StatelessWidget {
                     padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(15), horizontal: AppLayout.getHeight(15)),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(AppLayout.getHeight(18)),
-                      color: const Color(0xFFEC6545),
+                      color: AppColors.darkOrange,
                     ),
                     child: Column(
                       children: [

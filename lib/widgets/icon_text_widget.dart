@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ticket_booking_app/utils/app_colors.dart';
 import '../utils/app_layout.dart';
 import '../utils/app_style.dart';
 
@@ -19,7 +20,7 @@ class AppIconText extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(icon, color: const Color(0xFFBFC2DF)),
+          Icon(icon, color: AppColors.lightGrey),
           Gap(AppLayout.getWidth(10)),
           Text(text, style: Styles.textStyle,)
         ],

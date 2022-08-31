@@ -5,6 +5,7 @@ import 'package:ticket_booking_app/screens/home_screen.dart';
 import 'package:ticket_booking_app/screens/profile_screen.dart';
 import 'package:ticket_booking_app/screens/search_screen.dart';
 import 'package:ticket_booking_app/screens/ticket_screen.dart';
+import 'package:ticket_booking_app/utils/app_colors.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class _BottomBarState extends State<BottomBar> {
         showUnselectedLabels: false,
         selectedItemColor: Colors.blueGrey,
         type: BottomNavigationBarType.fixed,
-        unselectedItemColor: const Color(0xFF526480),
+        unselectedItemColor: AppColors.midBlue,
         items: const [
           BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
               activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
