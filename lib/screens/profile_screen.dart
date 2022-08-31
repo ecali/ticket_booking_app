@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/utils/app_layout.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
+import 'package:ticket_booking_app/utils/app_utils.dart';
 import 'package:ticket_booking_app/widgets/column_layout.dart';
 import 'package:ticket_booking_app/widgets/layout_builder_widget.dart';
 
@@ -162,7 +163,7 @@ class ProfileScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('Miles accrued', style: Styles.headlineStyle4.copyWith(fontSize: 16)),
-                    Text('23 May 2022', style: Styles.headlineStyle4.copyWith(fontSize: 16))
+                    Text(AppUtils.getDayDate(), style: Styles.headlineStyle4.copyWith(fontSize: 16))
                   ],
                 ),
                 Gap(AppLayout.getHeight(4)),
