@@ -35,7 +35,7 @@ List<Map<String, dynamic>> ticketList = [
     "number":23,
     "ticket_number": "55078 65355547",
     "booking_code": "B2SG28",
-    "price": "249.99"
+    "price": "245.99"
 
   },
   {
@@ -59,6 +59,11 @@ List<Map<String, dynamic>> ticketList = [
 
 List<Map<String, dynamic>> user = [
   {
+    'name': 'Elvio',
+    'surname': 'Cali',
+    'passport': '5221 364869',
+    'payment_method': 'visa',
+    'cart_number': '2642',
     "city": "Milan",
     "premium": true,
     "total_miles": 192802,
