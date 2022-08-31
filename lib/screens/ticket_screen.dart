@@ -40,9 +40,9 @@ class TicketScreen extends StatelessWidget {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        AppColumnLayout(firstText: 'Flutter DB', secondText: 'Passenger', alignment: CrossAxisAlignment.start, isColor: false),
-                        AppColumnLayout(firstText: '5221 364869', secondText: 'Passport', alignment: CrossAxisAlignment.end, isColor: false)
+                      children: [
+                        AppColumnLayout(firstText: user[0]['name'] + ' ' +user[0]['surname'], secondText: 'Passenger', alignment: CrossAxisAlignment.start, isColor: false),
+                        AppColumnLayout(firstText: user[0]['passport'], secondText: 'Passport', alignment: CrossAxisAlignment.end, isColor: false)
                       ],
                     ),
                     AppLayout.addGap(GapSize.moreMedium),
@@ -50,9 +50,9 @@ class TicketScreen extends StatelessWidget {
                     AppLayout.addGap(GapSize.moreMedium),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        AppColumnLayout(firstText: '55078 65355533', secondText: 'Number of E-Ticket', alignment: CrossAxisAlignment.start, isColor: false),
-                        AppColumnLayout(firstText: 'B2SG28', secondText: 'Booking code', alignment: CrossAxisAlignment.end, isColor: false)
+                      children: [
+                        AppColumnLayout(firstText: ticketList[0]['ticket_number'], secondText: 'Number of E-Ticket', alignment: CrossAxisAlignment.start, isColor: false),
+                        AppColumnLayout(firstText: ticketList[0]['booking_code'], secondText: 'Booking code', alignment: CrossAxisAlignment.end, isColor: false)
                       ],
                     ),
                     AppLayout.addGap(GapSize.moreMedium),
@@ -65,15 +65,15 @@ class TicketScreen extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Image.asset('assets/images/visa.png', scale: 11),
-                                Text(' ***2462', style: Styles.headlineStyle3)
+                                Image.asset('assets/images/${user[0]['payment_method']}.png', scale: 11),
+                                Text(' ***''${user[0]['cart_number']}', style: Styles.headlineStyle3)
                               ],
                             ),
                             AppLayout.addGap(GapSize.small),
                             Text('Payment method', style: Styles.headlineStyle4,)
                           ],
                         ),
-                        const AppColumnLayout(firstText: '\$249.99', secondText: 'Price', alignment: CrossAxisAlignment.end, isColor: false)
+                        AppColumnLayout(firstText: '\$' '${ticketList[0]['price']}', secondText: 'Price', alignment: CrossAxisAlignment.end, isColor: false)
                       ],
                     ),
                   ],
