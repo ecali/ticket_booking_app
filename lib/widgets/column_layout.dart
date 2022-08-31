@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/utils/app_utils.dart';
 
 import '../utils/app_layout.dart';

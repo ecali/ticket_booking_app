@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/screens/ticket_view.dart';
 import 'package:ticket_booking_app/utils/app_colors.dart';
 import 'package:ticket_booking_app/utils/app_info_list.dart';
@@ -17,7 +15,6 @@ class TicketScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       body: Stack(
@@ -121,7 +118,7 @@ class TicketScreen extends StatelessWidget {
             left: AppLayout.getHeight(22),
             top: AppLayout.getHeight(295),
             child: Container(
-              padding: EdgeInsets.all(3),
+              padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(color: AppColors.textColor, width: 2)
@@ -136,7 +133,7 @@ class TicketScreen extends StatelessWidget {
             right: AppLayout.getHeight(22),
             top: AppLayout.getHeight(295),
             child: Container(
-              padding: EdgeInsets.all(3),
+              padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(color: AppColors.textColor, width: 2)

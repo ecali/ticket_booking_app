@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/app_layout.dart';
 
 class AppLayoutBuilderWidget extends StatelessWidget {
   final bool? isColor;
