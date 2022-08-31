@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/utils/app_colors.dart';
 import 'package:ticket_booking_app/utils/app_layout.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
+import 'package:ticket_booking_app/utils/app_utils.dart';
 import 'package:ticket_booking_app/widgets/ticket_tabs.dart';
 
 import '../widgets/double_text_widget.dart';
@@ -20,15 +21,15 @@ class SearchScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20), vertical: AppLayout.getHeight(20)),
         children: [
-          Gap(AppLayout.getHeight(40)),
+          AppLayout.addGap(GapSize.veryBig),
           Text('What are\n you looking for?', style: Styles.headlineStyle.copyWith(fontSize: AppLayout.getWidth(35))),
-          Gap(AppLayout.getHeight(20)),
+          AppLayout.addGap(GapSize.moreMedium),
           const AppTicketTabs(firstTab: 'Airline Tickets', secondTab: 'Hotels'),
-          Gap(AppLayout.getHeight(25)),
+          AppLayout.addGap(GapSize.big),
           const AppIconText(icon: Icons.flight_takeoff_rounded, text: 'Departure'),
-          Gap(AppLayout.getHeight(20)),
+          AppLayout.addGap(GapSize.lessMedium),
           const AppIconText(icon: Icons.flight_land_rounded, text: 'Arrival'),
-          Gap(AppLayout.getHeight(25)),
+          AppLayout.addGap(GapSize.big),
           Container(
             padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(18), horizontal: AppLayout.getWidth(15)),
             decoration: BoxDecoration(
@@ -37,9 +38,9 @@ class SearchScreen extends StatelessWidget {
             ),
             child: Center(child: Text('Find tickets', style: Styles.textStyle.copyWith(color: Colors.white)))
           ),
-          Gap(AppLayout.getHeight(40)),
+          AppLayout.addGap(GapSize.veryBig),
           const AppDoubleTextWidget(bigText: 'Upcoming flights', smallText: 'view all'),
-          Gap(AppLayout.getHeight(15)),
+          AppLayout.addGap(GapSize.medium),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -72,7 +73,7 @@ class SearchScreen extends StatelessWidget {
                         )
                       ),
                     ),
-                    Gap(AppLayout.getHeight(12)),
+                    AppLayout.addGap(GapSize.lessMedium),
                     Text('20% discount on there early booking of this flight. Don\'t miss.',
                     style: Styles.headlineStyle2,)
                   ],
@@ -94,7 +95,7 @@ class SearchScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Discount\nfor survery', style: Styles.headlineStyle2.copyWith(fontWeight: FontWeight.bold, color: Colors.white)),
-                            Gap(AppLayout.getHeight(10)),
+                            AppLayout.addGap(GapSize.doubleSmall),
                             Text('Take the survery about our services and get discount', style: Styles.headlineStyle2.copyWith(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 18)),
                           ],
                         ),
@@ -113,7 +114,7 @@ class SearchScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  Gap(AppLayout.getHeight(15)),
+                  AppLayout.addGap(GapSize.medium),
                   Container(
                     width: size.width * .44,
                     height: AppLayout.getHeight(210),
@@ -125,7 +126,7 @@ class SearchScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         Text('Take love', style: Styles.headlineStyle2.copyWith(color: Colors.white, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
-                        Gap(AppLayout.getHeight(15)),
+                        AppLayout.addGap(GapSize.medium),
                         RichText(text: const TextSpan(
                           children: [
                             TextSpan(

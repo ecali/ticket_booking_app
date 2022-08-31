@@ -20,7 +20,7 @@ class ProfileScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20), vertical: AppLayout.getHeight(20)),
         children: [
-          Gap(AppLayout.getHeight(40)),
+          AppLayout.addGap(GapSize.veryBig),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -34,17 +34,17 @@ class ProfileScreen extends StatelessWidget {
                   )
                 ),
               ),
-              Gap(AppLayout.getHeight(10)),
+              AppLayout.addGap(GapSize.doubleSmall),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text('Book Tickets', style: Styles.headlineStyle),
-                  Gap(AppLayout.getHeight(2)),
+                  AppLayout.addGap(GapSize.mini),
                   Text('Milano', style:  TextStyle(
                     fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey.shade500
                   ),),
-                  Gap(AppLayout.getHeight(8)),
+                  AppLayout.addGap(GapSize.moreSmall),
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(AppLayout.getHeight(100)),
@@ -61,11 +61,11 @@ class ProfileScreen extends StatelessWidget {
                           ),
                           child: const Icon(FluentSystemIcons.ic_fluent_shield_filled, color: Colors.white, size: 15),
                         ),
-                        Gap(AppLayout.getHeight(5)),
+                        AppLayout.addGap(GapSize.small),
                         Text('Premium status', style: TextStyle(
                           color: AppColors.naviBlue, fontWeight: FontWeight.w600
                         )),
-                        Gap(AppLayout.getHeight(5)),
+                        AppLayout.addGap(GapSize.small),
                       ],
                     )
                   )
@@ -83,9 +83,9 @@ class ProfileScreen extends StatelessWidget {
               )
             ],
           ),
-          Gap(AppLayout.getHeight(8)),
+          AppLayout.addGap(GapSize.moreSmall),
           Divider(color: Colors.grey.shade300),
-          Gap(AppLayout.getHeight(8)),
+          AppLayout.addGap(GapSize.moreSmall),
           Stack(
             children: [
               Container(
@@ -119,7 +119,7 @@ class ProfileScreen extends StatelessWidget {
                       backgroundColor: Colors.white,
                       child: Icon(FluentSystemIcons.ic_fluent_lightbulb_filament_filled, color: Styles.primaryColor, size: 27),
                     ),
-                    Gap(AppLayout.getHeight(12)),
+                    AppLayout.addGap(GapSize.lessMedium),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,9 +136,9 @@ class ProfileScreen extends StatelessWidget {
               )
             ],
           ),
-          Gap(AppLayout.getHeight(25)),
+          AppLayout.addGap(GapSize.big),
           Text('Accumulated miles', style: Styles.headlineStyle2),
-          Gap(AppLayout.getHeight(20)),
+          AppLayout.addGap(GapSize.moreMedium),
           Container(
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(15)),
             decoration: BoxDecoration(
@@ -154,11 +154,11 @@ class ProfileScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Gap(AppLayout.getHeight(15)),
+                AppLayout.addGap(GapSize.medium),
                 Text('192802', style: TextStyle(
                   fontSize: 45, color: AppColors.textColor, fontWeight: FontWeight.w600
                 )),
-                Gap(AppLayout.getHeight(20)),
+                AppLayout.addGap(GapSize.moreMedium),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -166,10 +166,9 @@ class ProfileScreen extends StatelessWidget {
                     Text(AppUtils.getDayDate(), style: Styles.headlineStyle4.copyWith(fontSize: 16))
                   ],
                 ),
-                Gap(AppLayout.getHeight(4)),
+                AppLayout.addGap(GapSize.doubleMini),
                 Divider(color: Colors.grey.shade300),
-                Gap(AppLayout.getHeight(4)),
-
+                AppLayout.addGap(GapSize.doubleMini),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
@@ -177,9 +176,9 @@ class ProfileScreen extends StatelessWidget {
                     AppColumnLayout(firstText: 'Airlline CO', secondText: 'Received from', alignment: CrossAxisAlignment.end, isColor: false),
                   ],
                 ),
-                Gap(AppLayout.getHeight(12)),
+                AppLayout.addGap(GapSize.lessMedium),
                 const AppLayoutBuilderWidget(sections: 12, isColor: true),
-                Gap(AppLayout.getHeight(12)),
+                AppLayout.addGap(GapSize.lessMedium),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
@@ -187,9 +186,9 @@ class ProfileScreen extends StatelessWidget {
                     AppColumnLayout(firstText: 'McDonald\'s', secondText: 'Received from', alignment: CrossAxisAlignment.end, isColor: false),
                   ],
                 ),
-                Gap(AppLayout.getHeight(12)),
+                AppLayout.addGap(GapSize.lessMedium),
                 const AppLayoutBuilderWidget(sections: 12, isColor: true),
-                Gap(AppLayout.getHeight(12)),
+                AppLayout.addGap(GapSize.lessMedium),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
@@ -202,7 +201,7 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(AppLayout.getHeight(25)),
+          AppLayout.addGap(GapSize.big),
           InkWell(
             onTap: () => print('You are tapped'),
             child: Center(

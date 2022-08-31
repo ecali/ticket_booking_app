@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
+import 'package:ticket_booking_app/utils/app_utils.dart';
 import 'package:ticket_booking_app/widgets/column_layout.dart';
 import 'package:ticket_booking_app/widgets/layout_builder_widget.dart';
 
@@ -53,7 +54,7 @@ class TicketView extends StatelessWidget {
                       Text('${ticket['to']['code']}', style: isColor == null ?  Styles.headlineStyle3.copyWith(color: Colors.white) : Styles.headlineStyle3)
                     ],
                   ),
-                  const Gap(1),
+                  AppLayout.addGap(GapSize.one),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

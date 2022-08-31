@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ticket_booking_app/utils/app_utils.dart';
 
 import '../utils/app_layout.dart';
 import '../utils/app_style.dart';
@@ -18,7 +19,7 @@ class AppColumnLayout extends StatelessWidget {
       crossAxisAlignment: alignment,
       children: [
         Text(firstText, style: isColor == null ?  Styles.headlineStyle3.copyWith(color: Colors.white) : Styles.headlineStyle3),
-        Gap(AppLayout.getHeight(5)),
+        AppLayout.addGap(GapSize.small),
         Text(secondText, style: isColor == null ?  Styles.headlineStyle4.copyWith(color: Colors.white) : Styles.headlineStyle4),
       ],
     );

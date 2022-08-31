@@ -6,6 +6,7 @@ import 'package:ticket_booking_app/utils/app_colors.dart';
 import 'package:ticket_booking_app/utils/app_info_list.dart';
 import 'package:ticket_booking_app/utils/app_layout.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
+import 'package:ticket_booking_app/utils/app_utils.dart';
 import 'package:ticket_booking_app/widgets/column_layout.dart';
 import 'package:ticket_booking_app/widgets/ticket_tabs.dart';
 import 'package:barcode_widget/barcode_widget.dart';
@@ -24,11 +25,11 @@ class TicketScreen extends StatelessWidget {
           ListView(
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20),vertical: AppLayout.getHeight(20)),
             children: [
-              Gap(AppLayout.getHeight(40)),
+              AppLayout.addGap(GapSize.veryBig),
               Text('Tickets', style: Styles.headlineStyle,),
-              Gap(AppLayout.getHeight(20)),
+              AppLayout.addGap(GapSize.moreMedium),
               const AppTicketTabs(firstTab: 'Upcoming', secondTab: 'Previous'),
-              Gap(AppLayout.getHeight(20)),
+              AppLayout.addGap(GapSize.moreMedium),
               Container(
                 padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
                 child: TicketView(ticket: ticketList[0], isColor: true),
@@ -47,9 +48,9 @@ class TicketScreen extends StatelessWidget {
                         AppColumnLayout(firstText: '5221 364869', secondText: 'Passport', alignment: CrossAxisAlignment.end, isColor: false)
                       ],
                     ),
-                    Gap(AppLayout.getHeight(20)),
+                    AppLayout.addGap(GapSize.moreMedium),
                     const AppLayoutBuilderWidget(sections: 15, isColor: false, width: 5),
-                    Gap(AppLayout.getHeight(20)),
+                    AppLayout.addGap(GapSize.moreMedium),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
@@ -57,9 +58,9 @@ class TicketScreen extends StatelessWidget {
                         AppColumnLayout(firstText: 'B2SG28', secondText: 'Booking code', alignment: CrossAxisAlignment.end, isColor: false)
                       ],
                     ),
-                    Gap(AppLayout.getHeight(20)),
+                    AppLayout.addGap(GapSize.moreMedium),
                     const AppLayoutBuilderWidget(sections: 15, isColor: false, width: 5),
-                    Gap(AppLayout.getHeight(20)),
+                    AppLayout.addGap(GapSize.moreMedium),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -71,7 +72,7 @@ class TicketScreen extends StatelessWidget {
                                 Text(' ***2462', style: Styles.headlineStyle3)
                               ],
                             ),
-                            Gap(5),
+                            AppLayout.addGap(GapSize.small),
                             Text('Payment method', style: Styles.headlineStyle4,)
                           ],
                         ),
@@ -109,7 +110,7 @@ class TicketScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Gap(AppLayout.getHeight(20)),
+              AppLayout.addGap(GapSize.moreMedium),
               Container(
                 padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
                 child: TicketView(ticket: ticketList[0]),
