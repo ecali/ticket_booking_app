@@ -32,7 +32,11 @@ List<Map<String, dynamic>> ticketList = [
     'flying_time': '8H 30M',
     'date': "1 MAY",
     'departure_time':"08:00 AM",
-    "number":23
+    "number":23,
+    "ticket_number": "55078 65355547",
+    "booking_code": "B2SG28",
+    "price": "249.99"
+
   },
   {
     'from': {
@@ -46,6 +50,27 @@ List<Map<String, dynamic>> ticketList = [
     'flying_time': '4H 20M',
     'date': "10 MAY",
     'departure_time':"09:00 AM",
-    "number":45
+    "number":45,
+    "ticket_number": "24558 64596213",
+    "booking_code": "B1XT58",
+    "price": "199.98"
   },
+];
+
+List<Map<String, dynamic>> user = [
+  {
+    "city": "Milan",
+    "premium": true,
+    "total_miles": 192802,
+    'last_miles' : [
+      {'Miles': '23 042', 'from': 'Airline CO'},
+      {'Miles': '24', 'from': 'McDonald\'s'},
+      {'Miles': '52 340', 'from': 'Exuma'},
+    ],
+    'reward': {
+      'active': true,
+      'flight': '50'
+    }
+  }
+
 ];
