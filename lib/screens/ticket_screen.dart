@@ -41,8 +41,8 @@ class TicketScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        AppColumnLayout(firstText: user[0]['name'] + ' ' +user[0]['surname'], secondText: 'Passenger', alignment: CrossAxisAlignment.start, isColor: false),
-                        AppColumnLayout(firstText: user[0]['passport'], secondText: 'Passport', alignment: CrossAxisAlignment.end, isColor: false)
+                        AppColumnLayout(firstText: user['name'] + ' ' +user['surname'], secondText: 'Passenger', alignment: CrossAxisAlignment.start, isColor: false),
+                        AppColumnLayout(firstText: user['passport'], secondText: 'Passport', alignment: CrossAxisAlignment.end, isColor: false)
                       ],
                     ),
                     AppLayout.addGap(GapSize.moreMedium),
@@ -65,8 +65,8 @@ class TicketScreen extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Image.asset('assets/images/${user[0]['payment_method']}.png', scale: 11),
-                                Text(' ***''${user[0]['cart_number']}', style: Styles.headlineStyle3)
+                                Image.asset('assets/images/${user['payment_method']}.png', scale: 11),
+                                Text(' ***''${user['cart_number']}', style: Styles.headlineStyle3)
                               ],
                             ),
                             AppLayout.addGap(GapSize.small),
