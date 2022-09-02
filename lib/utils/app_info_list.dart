@@ -57,8 +57,7 @@ List<Map<String, dynamic>> ticketList = [
   },
 ];
 
-List<Map<String, dynamic>> user = [
-  {
+Map<String, dynamic> user = {
     'name': 'Elvio',
     'surname': 'Cali',
     'passport': '5221 364869',
@@ -66,16 +65,14 @@ List<Map<String, dynamic>> user = [
     'cart_number': '2642',
     "city": "Milan",
     "premium": true,
-    "total_miles": 192802,
+    "total_miles": 192803,
     'last_miles' : [
-      {'Miles': '23 042', 'from': 'Airline CO'},
-      {'Miles': '24', 'from': 'McDonald\'s'},
-      {'Miles': '52 340', 'from': 'Exuma'},
+      {'miles': '23 042', 'from': 'Airline CO'},
+      {'miles': '24', 'from': 'McDonald\'s'},
+      {'miles': '52 340', 'from': 'Exuma'},
     ],
     'reward': {
       'active': true,
       'flight': '50'
     }
-  }
-
-];
+  };
