@@ -62,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
                           child: const Icon(FluentSystemIcons.ic_fluent_shield_filled, color: Colors.white, size: 15),
                         ),
                         AppLayout.addGap(GapSize.small),
-                        Text(userData['premium'] ? 'Premium status' : 'Became Premium', style: TextStyle(
+                        Text(userData['premium'] ? 'Premium status' : 'Becomes Premium', style: TextStyle(
                           color: AppColors.naviBlue, fontWeight: FontWeight.w600
                         )),
                         AppLayout.addGap(GapSize.small),
@@ -194,7 +194,7 @@ class ProfileScreen extends StatelessWidget {
                         AppLayout.addGap(GapSize.lessMedium),
                       ],
                     );
-                      }).toList(),
+                  }).toList(),
                 ),
               ],
             ),
