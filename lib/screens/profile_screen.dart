@@ -1,11 +1,11 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_booking_app/utils/app_info_list.dart';
 import 'package:ticket_booking_app/utils/app_layout.dart';
 import 'package:ticket_booking_app/utils/app_style.dart';
 import 'package:ticket_booking_app/utils/app_utils.dart';
 import 'package:ticket_booking_app/widgets/column_layout.dart';
 import 'package:ticket_booking_app/widgets/layout_builder_widget.dart';
-
 import '../utils/app_colors.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -13,6 +13,8 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, dynamic> userData = user;
+
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       body: ListView(
@@ -39,7 +41,7 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   Text('Book Tickets', style: Styles.headlineStyle),
                   AppLayout.addGap(GapSize.mini),
-                  Text('Milano', style:  TextStyle(
+                  Text(userData['city'], style:  TextStyle(
                     fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey.shade500
                   ),),
                   AppLayout.addGap(GapSize.moreSmall),
@@ -60,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
                           child: const Icon(FluentSystemIcons.ic_fluent_shield_filled, color: Colors.white, size: 15),
                         ),
                         AppLayout.addGap(GapSize.small),
-                        Text('Premium status', style: TextStyle(
+                        Text(userData['premium'] ? 'Premium status' : 'Became Premium', style: TextStyle(
                           color: AppColors.naviBlue, fontWeight: FontWeight.w600
                         )),
                         AppLayout.addGap(GapSize.small),
@@ -84,7 +86,8 @@ class ProfileScreen extends StatelessWidget {
           AppLayout.addGap(GapSize.moreSmall),
           Divider(color: Colors.grey.shade300),
           AppLayout.addGap(GapSize.moreSmall),
-          Stack(
+          if(userData['reward']['active'])
+            Stack(
             children: [
               Container(
                 height: AppLayout.getHeight(90),
@@ -124,7 +127,7 @@ class ProfileScreen extends StatelessWidget {
                       children: [
                         Text('You\'v got a new award',
                             style: Styles.headlineStyle2.copyWith(fontWeight: FontWeight.bold, color: Colors.white)),
-                        Text('You have 95 flights in a year',
+                        Text('You have ${userData['reward']['flight']} flights in a year',
                             style: Styles.headlineStyle2.copyWith(fontWeight: FontWeight.w500,
                                 color: Colors.white.withOpacity(0.9), fontSize: 16))
                       ],
@@ -153,7 +156,7 @@ class ProfileScreen extends StatelessWidget {
             child: Column(
               children: [
                 AppLayout.addGap(GapSize.medium),
-                Text('192802', style: TextStyle(
+                Text(userData['total_miles'].toString(), style: TextStyle(
                   fontSize: 45, color: AppColors.textColor, fontWeight: FontWeight.w600
                 )),
                 AppLayout.addGap(GapSize.moreMedium),
@@ -167,35 +170,32 @@ class ProfileScreen extends StatelessWidget {
                 AppLayout.addGap(GapSize.doubleMini),
                 Divider(color: Colors.grey.shade300),
                 AppLayout.addGap(GapSize.doubleMini),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    AppColumnLayout(firstText: '23 042', secondText: 'Miles', alignment: CrossAxisAlignment.start, isColor: false),
-                    AppColumnLayout(firstText: 'Airlline CO', secondText: 'Received from', alignment: CrossAxisAlignment.end, isColor: false),
-                  ],
+                Column(
+                  children: userData['last_miles'].map<Widget>((milesData){
+                    return Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            AppColumnLayout(
+                                firstText: milesData['miles'],
+                                secondText: 'Miles',
+                                alignment: CrossAxisAlignment.start,
+                                isColor: false),
+                            AppColumnLayout(
+                                firstText: milesData['from'],
+                                secondText: 'Received from',
+                                alignment: CrossAxisAlignment.end,
+                                isColor: false),
+                          ],
+                        ),
+                        AppLayout.addGap(GapSize.lessMedium),
+                        const AppLayoutBuilderWidget(sections: 12, isColor: true),
+                        AppLayout.addGap(GapSize.lessMedium),
+                      ],
+                    );
+                      }).toList(),
                 ),
-                AppLayout.addGap(GapSize.lessMedium),
-                const AppLayoutBuilderWidget(sections: 12, isColor: true),
-                AppLayout.addGap(GapSize.lessMedium),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    AppColumnLayout(firstText: '24', secondText: 'Miles', alignment: CrossAxisAlignment.start, isColor: false),
-                    AppColumnLayout(firstText: 'McDonald\'s', secondText: 'Received from', alignment: CrossAxisAlignment.end, isColor: false),
-                  ],
-                ),
-                AppLayout.addGap(GapSize.lessMedium),
-                const AppLayoutBuilderWidget(sections: 12, isColor: true),
-                AppLayout.addGap(GapSize.lessMedium),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    AppColumnLayout(firstText: '52 340', secondText: 'Miles', alignment: CrossAxisAlignment.start, isColor: false),
-                    AppColumnLayout(firstText: 'Exuma', secondText: 'Received from', alignment: CrossAxisAlignment.end, isColor: false),
-                  ],
-                )
-
-
               ],
             ),
           ),
