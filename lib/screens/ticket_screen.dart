@@ -98,7 +98,7 @@ class TicketScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(AppLayout.getHeight(15)),
                     child: BarcodeWidget(
                       barcode: Barcode.code128(),
-                      data: 'https://github.com/ecali',
+                      data: ticketList[0]['ticket_number'],
                       drawText: false,
                       color: AppColors.textColor,
                       width: double.infinity,
